@@ -1,0 +1,40 @@
+type Query {
+  movies(filter: FiltersParam): Movies
+  moviesByIds(ids: [Int]): [Movie]
+  genres: [Genre]
+}
+input FiltersParam{
+  page: Int
+  genre: Int
+  includeAdult: Boolean
+  sortBy: String
+  sortDirection: SORT_DIRECTION
+  year: Int
+}
+enum SORT_DIRECTION{
+  desc,
+  asc
+}
+type Movies {
+  page: Int!
+  totalResults: Int!
+  totalPages: Int!
+  results: [Movie!]!
+}
+
+type Movie{
+  id: ID!
+  title: String!
+  releaseDate: String
+  posterPath: String!
+  genres: [Genre]
+  adult: Boolean
+  originalLanguage: String
+  popularity: Float
+  runtime: Int
+}
+
+type Genre {
+  id: Int!
+  name: String!
+}
