@@ -20,7 +20,7 @@ Movies Recommendation
 
 ----
 
-[Link to app](https://movies-recommend-one.vercel.app/ "go to app")
+[Link to app](https://movies-nine-alpha.vercel.app/ "go to app")
 
 
 
@@ -33,7 +33,7 @@ Movies Recommendation
 
     import startApolloServer from "../src/index.js";
     export { startApolloServer };
-	 
+
 ```
 - create another folder and file in it:
 `mkdir public && cd public && touch .gitkeep`
